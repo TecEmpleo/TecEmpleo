@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecEmpleo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/Logo.png" alt="Logo NO LO QUIEREN HACER MIS COMPAÑEROS">
+        </div>
+        <nav>
+           <ul class="nav-links">
+                <li><a href="inicio.html">Inicio de Sesión</a></li>
+                
+                <li><a href="contactanos.html">Contactanos</a></li>
+           </ul>            
+        </nav>
+        <a class="btn" href="HdV.html"><button>HdV</button></a>
+    </header>
+    <br>
+    <br>
+    <br>
+<center>
+    <h1></h1>
+
+    <input type="text" id="search-input" placeholder="Cargo o Categoria" required>
+  <button id="search-button" onclick="search()"><i class="fas fa-search"></i></button>
+
+  <ul id="search-results"></ul>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    function search() {
+      var query = document.getElementById('search-input').value;
+
+      // Realiza aquí la lógica de búsqueda (por ejemplo, una solicitud a una API)
+      // Aquí se usa una simulación de resultados estáticos
+      var results = [
+        "Resultado 1",
+        "Resultado 2",
+        "Resultado 3"
+      ];
+
+      var resultList = document.getElementById('search-results');
+      resultList.innerHTML = ''; // Limpia los resultados anteriores
+
+      for (var i = 0; i < results.length; i++) {
+        var li = document.createElement('li');
+        li.textContent = results[i];
+        resultList.appendChild(li);
+      }
+    }
+  </script>
+</center>
+<br>
+
+
+<h1>Vacantes</h1>
+<br>
+  <div class="vacantes-container">
+    <div class="vacante-container">
+      <div class="vacante-titulo">Desarrollador Frontend</div>
+      <div class="vacante-empresa">Empresa ABC</div>
+      <div class="vacante-descripcion">Estamos buscando un desarrollador frontend con experiencia en HTML, CSS y JavaScript.</div>
+      <div class="vacante-ubicacion">Ciudad XYZ</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+    
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+    <!-- Agrega más contenedores de vacantes aquí -->
+
+  </div>
+  <br>
+  <div class="vacantes-container">
+    <div class="vacante-container">
+      <div class="vacante-titulo">Desarrollador Frontend</div>
+      <div class="vacante-empresa">Empresa ABC</div>
+      <div class="vacante-descripcion">Estamos buscando un desarrollador frontend con experiencia en HTML, CSS y JavaScript.</div>
+      <div class="vacante-ubicacion">Ciudad XYZ</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+    
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+    <!-- Agrega más contenedores de vacantes aquí -->
+
+  </div>
+
+  <br>
+  <div class="vacantes-container">
+    <div class="vacante-container">
+      <div class="vacante-titulo">Desarrollador Frontend</div>
+      <div class="vacante-empresa">Empresa ABC</div>
+      <div class="vacante-descripcion">Estamos buscando un desarrollador frontend con experiencia en HTML, CSS y JavaScript.</div>
+      <div class="vacante-ubicacion">Ciudad XYZ</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+    
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+
+    <div class="vacante-container">
+      <div class="vacante-titulo">Diseñador Gráfico</div>
+      <div class="vacante-empresa">Empresa XYZ</div>
+      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
+      <div class="vacante-ubicacion">Ciudad ABC</div>
+    </div>
+    <!-- Agrega más contenedores de vacantes aquí -->
+
+  </div>
+
+  <br>
+  <bR>
+
+    
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-logo"></div>
+      <ul class="footer-nav">
+        <li><a href="#">Copyright 2023 - SENA.</a></li>
+        <li><a href="#">Acerca de nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="contactanos.html">Contactanos</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+</footer>  
+
+    
+</body>
+</html>
+
