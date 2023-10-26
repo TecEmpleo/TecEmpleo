@@ -1,207 +1,147 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["id"])) {
+    header("Location: inicio_sesion.html");
+    exit();
+}
+
+$Nombre_Reg = $_SESSION["Nombre_Reg"];
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecEmpleo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylo.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="img/Logo.png">
+    <title>TecEmpleo | Portal de Empleo</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="img/Logo.png" alt="Logo NO LO QUIEREN HACER MIS COMPAÑEROS">
+    <nav>
+        <button class="menu" id="menuButton">
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </button>
+        
+        <div class="sidebar" id="sidebar">
+            <h1>¡¡Bienvenido A TecEmpleo!!</h1> <?php echo $Nombre_Reg; ?>!</h2>
+            <div class="heading">
+            <ul>
+                <li><a href=""><i class="ri-search-line" style="color: #ffffff;"></i>Ofertas</a></li>
+                <li><a href=""><i class="ri-heart-line" style="color: #ffffff;"></i>Favoritos</a></li>
+                <li><a href=""><i class="ri-notification-fill" style="color: #ffffff;"></i>Notificaciones</a></li>
+                <div class="container-one">
+                    <ul>
+                        <li><a href="">Empresas</a></li>
+                        <li><a href="">Crear HDV</a></li>
+                        <li><a href="">Salarios</a></li>
+                        <li><a href="">Publicar Ofertas</a></li>
+                    </ul>
+                </div>
+ <center>          
+               </div>
+                <div class="contenedor">
+                    <ul>
+                        <li>
+                            <a href="login/inicio_sesion.html"><i class="ri-user-line" style="color: #ffffff;"></i>Iniciar Sesión</a>
+                        </li>
+                        <li>
+                        <a href="login/cerrar_sesion.php"><i class="ri-logout-box-line" style="color: #ffffff;"></i>Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                 </ul>
+            </div>
+        </div> 
+    </nav>
+    <div class="header">
+        <h3>!!No Importa Lo Despacio Que Vayas
+            Siempre Y Cuando No Te Detengas¡¡
+        </h3>
+        <a href="">Crear HDV</a>
+        <div class="search-container">
+            <div class="search-container">
+                <i class="ri-map-pin-user-fill"></i>
+                <select class="country-select">
+                    <option value="todos">Ciudad</option>
+                    <option value="Bogota">Bogota D.C</option>
+                    <option value="Medellin">Medellin</option>
+                    <option value="Cartagen">Cartagena</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Villavicencio">Villavicencio</option>
+                    <option value="Santa Marta">Santa Marta</option>
+                    <option value="usa">Valled Dupar</option>
+                    <option value="canada">Tunja</option>
+                    <option value="todos">Santander</option>
+                    <option value="usa">Cucuta</option>
+                    <option value="canada">Vichada</option>
+                    <option value="todos">Popayan</option>
+                    <option value="usa">Casanare</option>
+                    <option value="canada">Choco</option>
+                </select>
+                <i class="ri-suitcase-fill"></i>
+                <input type="text" class="search-input" placeholder="Empleo o Categoria">
+                <button class="search-button">Buscar</button>
+            </div>
+<center>             
+        </div>      
+    </div>
+    </button>
+    <div class="contenedor-imagenes">
+        <div class="cuadro"><a href="#"><img src="img/AKT Publicidad.png" alt="Imagen 1"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/Logo_alkosto.jfif" alt="Imagen 2"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/katronix.png" alt="Imagen 3"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/alkomprar.png" alt="Imagen 4"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/bancolombia.png" alt="Imagen 5"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/Coca-Cola-logo.png" alt="Imagen 6"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/avevillas.png" alt="Imagen 7"></a></div>
+        <div class="cuadro"><a href="#"><img src="img/aval.png" alt="Imagen 8"></a></div>
+    </div>
+    <div class="contenedor-boton">
+        <p class="parrafo">"Tu futuro laboral está lleno de oportunidades esperando a ser descubiertas en TecEmpleo. </p>
+        <a class="btn" href="Panel De Administrador/empresa/empresa.php" id="buscarEmpresasLink">Buscar Empresas</a>
+    </div>   
+<center> 
+    <div class="profile-container">
+        <img src="img/perfil.png" alt="Tu imagen de perfil" class="profile-image">
+        <div class="profile-description">
+            <h1>!!Crea De Manera Rapida Tu Perfil¡¡</h1>
+            <h2>!!Refistrate Gratis Y Crea Tu Perfil De manera Gratuita¡¡</h2>
+            <h2>!!Completa Tu Hoja De vida Y Enviala¡¡</h2>
+            <h3>En TecEmpleo Encontraras Ofertas de Trabajo Gartis¡¡</h3>
+            <h4>!!Buscamos Empresas Que Necesiten Empleados¡¡</h4>
+            <a class="btn-nuevo" href="login/registro.html" id="buscarEmpresasLink">Crear Perfil</a>
         </div>
-        <nav>
-           <ul class="nav-links">
-                <li><a href="inicio.html">Inicio de Sesión</a></li>
-                
-                <li><a href="contactanos.html">Contactanos</a></li>
-           </ul>            
-        </nav>
-        <a class="btn" href="HdV.html"><button>HdV</button></a>
-    </header>
-    <br>
-    <br>
-    <br>
-<center>
-    <h1></h1>
-
-    <input type="text" id="search-input" placeholder="Cargo o Categoria" required>
-  <button id="search-button" onclick="search()"><i class="fas fa-search"></i></button>
-
-  <ul id="search-results"></ul>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-  <script>
-    function search() {
-      var query = document.getElementById('search-input').value;
-
-      // Realiza aquí la lógica de búsqueda (por ejemplo, una solicitud a una API)
-      // Aquí se usa una simulación de resultados estáticos
-      var results = [
-        "Resultado 1",
-        "Resultado 2",
-        "Resultado 3"
-      ];
-
-      var resultList = document.getElementById('search-results');
-      resultList.innerHTML = ''; // Limpia los resultados anteriores
-
-      for (var i = 0; i < results.length; i++) {
-        var li = document.createElement('li');
-        li.textContent = results[i];
-        resultList.appendChild(li);
-      }
-    }
-  </script>
-</center>
-<br>
-
-
-<h1>Vacantes</h1>
-<br>
-  <div class="vacantes-container">
-    <div class="vacante-container">
-      <div class="vacante-titulo">Desarrollador Frontend</div>
-      <div class="vacante-empresa">Empresa ABC</div>
-      <div class="vacante-descripcion">Estamos buscando un desarrollador frontend con experiencia en HTML, CSS y JavaScript.</div>
-      <div class="vacante-ubicacion">Ciudad XYZ</div>
     </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
+    <div class="contenedor-cuadrados">
+        <div class="cuadrado izquierda">
+            <img src="img/buscar.png"Imagen Izquierda">
+            <h2>¡Únete a nuestro equipo y sé parte de una aventura profesional!"</h2>
+            <p>¿Estás listo para unirte a la comunidad de empresas que están transformando el panorama laboral y descubriendo el talento del mañana? "</p>
+        </div>
+        <div class="cuadrado centro">
+            <img src="img/vision.png" alt="Imagen Centro" style="margin-top: -35px;">
+            <h2>Visión de TecEmpleo</h2>
+            <p>Ser la plataforma líder en la transformación del mundo laboral, conectando de manera efectiva a empresas con talento</p>
+        </div>
+        <div class="cuadrado derecha">
+            <img src="img/contratacion.jpg" alt="Imagen Derecha">
+            <h2>"Contrata el talento que tu empresa necesita en TecEmpleo."</h2>
+            <p>En TecEmpleo, transformamos tu búsqueda de talento en un viaje hacia el éxito empresarial.</p>
+        </div>
     </div>
     
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
     </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
+    <footer class="footer">
+    <div class="copyright">
+        &copy; 2023 TecEmpleo. Todos los derechos reservados.
     </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-    <!-- Agrega más contenedores de vacantes aquí -->
-
-  </div>
-  <br>
-  <div class="vacantes-container">
-    <div class="vacante-container">
-      <div class="vacante-titulo">Desarrollador Frontend</div>
-      <div class="vacante-empresa">Empresa ABC</div>
-      <div class="vacante-descripcion">Estamos buscando un desarrollador frontend con experiencia en HTML, CSS y JavaScript.</div>
-      <div class="vacante-ubicacion">Ciudad XYZ</div>
-    </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-    
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-    <!-- Agrega más contenedores de vacantes aquí -->
-
-  </div>
-
-  <br>
-  <div class="vacantes-container">
-    <div class="vacante-container">
-      <div class="vacante-titulo">Desarrollador Frontend</div>
-      <div class="vacante-empresa">Empresa ABC</div>
-      <div class="vacante-descripcion">Estamos buscando un desarrollador frontend con experiencia en HTML, CSS y JavaScript.</div>
-      <div class="vacante-ubicacion">Ciudad XYZ</div>
-    </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-    
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-
-    <div class="vacante-container">
-      <div class="vacante-titulo">Diseñador Gráfico</div>
-      <div class="vacante-empresa">Empresa XYZ</div>
-      <div class="vacante-descripcion">Buscamos un diseñador gráfico creativo y talentoso para unirse a nuestro equipo.</div>
-      <div class="vacante-ubicacion">Ciudad ABC</div>
-    </div>
-    <!-- Agrega más contenedores de vacantes aquí -->
-
-  </div>
-
-  <br>
-  <bR>
+</footer>
 
     
-
-<footer>
-    <div class="footer-content">
-      <div class="footer-logo"></div>
-      <ul class="footer-nav">
-        <li><a href="#">Copyright 2023 - SENA.</a></li>
-        <li><a href="#">Acerca de nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="contactanos.html">Contactanos</a></li>
-      </ul>
-    </div>
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-
-</footer>  
-
     
+    <script src="https://kit.fontawesome.com/595a890311.js" crossorigin="anonymous"></script>
+    <script src="JavaScript/tecempleo.js"></script>
 </body>
 </html>
-
