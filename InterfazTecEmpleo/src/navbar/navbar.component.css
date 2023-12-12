@@ -1,0 +1,23 @@
+.custom-input {
+    width: 400px;
+    height: 40px; 
+    font-size: 16px; 
+  }
+
+.orange-bg {
+    background-color: #ff9800; 
+  }
+  
+
+.brand-text {
+    font-size: 24px; 
+    margin-left: 10px; 
+  }
+  .navbar-nav li {
+    border-right: 1px solid white;
+    padding-right: 10px;
+  }
+
+  .navbar-nav li:last-child {
+    border-right: none;
+  }
