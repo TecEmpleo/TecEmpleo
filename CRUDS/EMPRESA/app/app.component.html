@@ -1,0 +1,72 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Datos De La Empresa</h1>
+  
+  <table class="table" *ngIf="hayRegistros() else sinarticulos">
+    <thead>
+      <tr>
+        <th>id_empresa</th>
+        <th>Ciudad_emp</th>
+        <th>Direccion_emp</th>
+        <th>Email_emp</th>
+        <th>Telefono_emp</th>
+        <th>Nom_emp</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empresa of empresas">
+        <td>{{ empresa.id_empresa }}</td>
+        <td>{{ empresa.Ciudad_emp }}</td>
+        <td>{{ empresa.Direccion_emp }}</td>
+        <td>{{ empresa.Email_emp }}</td>
+        <td>{{ empresa.Telefono_emp }}</td>
+        <td>{{ empresa.Nom_emp }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="baja(empresa.id_empresa)">Borrar</button>
+          <button class="btn btn-primary btn-sm" (click)="seleccionar(empresa.id_empresa)">Seleccionar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #sinarticulos>
+    <p>No hay ningún dato.</p>
+  </ng-template>
+
+  <div class="mb-4">
+    <div class="form-group">
+      <label for="id_empresa">id_empresa</label>
+      <input type="text" class="form-control" id="id_empresa" [(ngModel)]="empresa.id_empresa" />
+    </div>
+
+    <div class="form-group">
+      <label for="Ciudad_emp">Ciudad_emp</label>
+      <input type="text" class="form-control" id="Ciudad_emp" [(ngModel)]="empresa.Ciudad_emp" />
+    </div>
+
+    <div class="form-group">
+      <label for="Direccion_emp">Direccion_emp</label>
+      <input type="text" class="form-control" id="Direccion_emp" [(ngModel)]="empresa.Direccion_emp" />
+    </div>
+
+    <div class="form-group">
+      <label for="Email_emp">Email_emp</label>
+      <input type="text" class="form-control" id="Email_emp" [(ngModel)]="empresa.Email_emp" />
+    </div>
+
+    <div class="form-group">
+      <label for="Telefono_emp">Telefono_emp</label>
+      <input type="text" class="form-control" id="Telefono_emp" [(ngModel)]="empresa.Telefono_emp" />
+    </div>
+
+    <div class="form-group">
+      <label for="Nom_emp">Nom_emp</label>
+      <input type="text" class="form-control" id="Nom_emp" [(ngModel)]="empresa.Nom_emp" />
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success" (click)="alta()">Agregar</button>
+      <button class="btn btn-warning" (click)="modificacion()">Modificar</button>
+    </div>
+  </div>
+</div>
