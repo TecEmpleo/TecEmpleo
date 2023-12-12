@@ -1,0 +1,42 @@
+<h1 class="display-3">Calculadora Salarial</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Formulario -->
+                    <form (ngSubmit)="calcularSalario()">
+                        <div class="mb-3">
+                            <label class="form-label">Salario:</label>
+                            <input type="number" class="form-control" [(ngModel)]="salario" name="salario" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Otros ingresos mensuales no salariales:</label>
+                            <input type="number" class="form-control" [(ngModel)]="otrosIngresos" name="otrosIngresos" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Subsidio de transporte:</label>
+                            <input type="number" class="form-control" [(ngModel)]="subsidioTransporte" name="subsidioTransporte" />
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Muestra los resultados -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body" *ngIf="resultadosCalculados">
+                    <p class="card-text">Ingresos gravables: {{ baseGravable }}</p>
+                    <p class="card-text">Retención en la fuente: {{ retencionFuente }}</p>
+                    <p class="card-text">Compensación neta mensual: {{ compensacionNeta }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
