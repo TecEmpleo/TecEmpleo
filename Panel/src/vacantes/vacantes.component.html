@@ -1,0 +1,60 @@
+<div class="container mt-3">
+    <h1>Administración de Vacantes</h1>
+  
+    <table class="table table-striped" *ngIf="hayRegistros(); else sinvacantes">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categoría ID</th>
+          <th>Empresa ID</th>
+          <th>Descripción</th>
+          <th>Fecha de Publicación</th>
+          <th>Fecha de Cierre</th>
+          <th>Estado</th>
+          <th>Borrar</th>
+          <th>Seleccionar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vacante of vacantes">
+          <td>{{vacante.idVacantes}}</td>
+          <td>{{vacante.Categoria_idCategoria}}</td>
+          <td>{{vacante.Empresa_idEmpresa}}</td>
+          <td>{{vacante.Descripcion_vac}}</td>
+          <td>{{vacante.Fecha_Publicacion}}</td>
+          <td>{{vacante.Fecha_Cierre}}</td>
+          <td>{{vacante.Estado}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="baja(vacante.idVacantes)">Borrar</button>
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="seleccionar(vacante.idVacantes)">Seleccionar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #sinvacantes>
+      <p>No hay vacantes.</p>
+    </ng-template>
+  
+    <div>
+      <p>
+        Descripción: <input class="form-control" type="text" [(ngModel)]="vacante.Descripcion_vac" />
+      </p>
+      <p>
+        Fecha de Publicación: <input class="form-control" type="text" [(ngModel)]="vacante.Fecha_Publicacion" />
+      </p>
+      <p>
+        Fecha de Cierre: <input class="form-control" type="text" [(ngModel)]="vacante.Fecha_Cierre" />
+      </p>
+      <p>
+        Estado: <input class="form-control" type="text" [(ngModel)]="vacante.Estado" />
+      </p>
+      <p>
+        <button class="btn btn-success" (click)="alta()">Agregar</button>
+        <button class="btn btn-warning" (click)="modificacion()">Modificar</button>
+      </p>
+    </div>
+  </div>
+  
