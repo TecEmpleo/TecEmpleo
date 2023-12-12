@@ -1,0 +1,59 @@
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Administrar Estudios</a>
+      </div>
+    </nav>
+  
+    <table class="table" *ngIf="hayRegistros(); else sinestudios">
+      <thead>
+        <tr>
+          <th>idEstudios</th>
+          <th>Universidad</th>
+          <th>Primaria</th>
+          <th>Secundaria</th>
+          <th>Otros estudios</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let estudio of estudios">
+          <td>{{estudio.idEstudios}}</td>
+          <td>{{estudio.Estudios_universitarios}}</td>
+          <td>{{estudio.Estudios_Primaria}}</td>
+          <td>{{estudio.Estudios_Segundaria}}</td>
+          <td>{{estudio.Otros_Estudios}}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="baja(estudio.idEstudios)">
+              <i class="bi bi-trash"></i> Borrar
+            </button>
+            <button class="btn btn-primary btn-sm" (click)="seleccionar(estudio.idEstudios)">
+              <i class="bi bi-search"></i> Seleccionar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #sinestudios>
+      <p>No hay estudios.</p>
+    </ng-template>
+  
+    <div>
+      <label>Estudios Universitarios:</label>
+      <input type="text" [(ngModel)]="estudioSeleccionado.Estudios_universitarios" />
+  
+      <label>Estudios Primaria:</label>
+      <input type="text" [(ngModel)]="estudioSeleccionado.Estudios_Primaria" />
+  
+      <label>Estudios Secundaria:</label>
+      <input type="text" [(ngModel)]="estudioSeleccionado.Estudios_Segundaria" />
+  
+      <label>Otros Estudios:</label>
+      <input type="text" [(ngModel)]="estudioSeleccionado.Otros_Estudios" />
+  
+      <button class="btn btn-success" (click)="alta()"><i class="bi bi-plus"></i> Agregar</button>
+      <button class="btn btn-warning" (click)="modificacion()"><i class="bi bi-pencil"></i> Modificar</button>
+    </div>
+  </div>
+  
