@@ -1,0 +1,26 @@
+<div class="contenedor-oferta">
+    <h3 class="mb-4">Ofertas de Empleo</h3>
+  
+    <div class="form-group">
+      <label for="filtroCategoria">Filtrar por Categoría:</label>
+      <select id="filtroCategoria" class="form-control form-control-sm" [(ngModel)]="filtroCategoria">
+        <option *ngFor="let categoria of categorias">{{ categoria }}</option>
+      </select>
+    </div>
+    <div *ngFor="let oferta of filtrarOfertas()" class="card mb-4">
+      <div class="card-body">
+        <h4 class="card-title">{{ oferta.titulo }}</h4>
+        <div class="info-oferta">
+          <p><strong>Empresa:</strong> {{ oferta.empresa }}</p>
+          <p><strong>Salario:</strong> {{ oferta.salario }}</p>
+          <p><strong>Ubicación:</strong> {{ oferta.ubicacion }}</p>
+          <p><strong>Publicado:</strong> {{ oferta.fechaPublicacion }}</p>
+          <p><strong>Descripción:</strong> {{ oferta.descripcion }}</p>
+          <p><strong>Categoría:</strong> {{ oferta.categoria }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <button (click)="verMas()" class="btn btn-primary">Ver Más</button>
+  </div>
+  
