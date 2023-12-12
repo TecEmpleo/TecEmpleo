@@ -1,0 +1,33 @@
+<div class="container-form login hide">
+  <div class="information">
+    <div class="info-childs">
+      <img src="assets/bbb.png" width="280" height="100">
+      <p class="mt-3">Bienvenido a TecEmpleo</p>
+    </div>
+  </div>
+  <div class="form-information">
+    <div class="form-information-childs">
+      <h2 class="mb-4">INICIAR SESIÓN</h2>
+      <div class="icons mb-4">
+        <i class='bx bxl-google mx-2'></i>
+        <i class='bx bxl-facebook-circle mx-2'></i>
+        <i class='bx bxl-instagram mx-2'></i>
+      </div>
+      <form class="form" (ngSubmit)="iniciarSesion()">
+        <div class="mb-3">
+          <label for="email" class="form-label">
+            <i class='bx bx-envelope'></i> Correo Electrónico
+          </label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="Email_reg" placeholder="Correo Electrónico" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">
+            <i class='bx bx-lock-alt'></i> Contraseña
+          </label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="contrasena" name="Contrasena" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+      </form>
+    </div>
+  </div>
+</div>
