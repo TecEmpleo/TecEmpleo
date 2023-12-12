@@ -1,0 +1,67 @@
+<div class="container mt-4">
+  <h2 class="mb-3">{{ modoEdicion ? 'Editar Postulación' : 'Nueva Postulación' }}</h2>
+  <form (ngSubmit)="guardarPostulacion()">
+      <div class="form-group">
+          <label for="idEmpresa">Vacantes_Empresa_idEmpresa:</label>
+          <input type="text" class="form-control" id="idEmpresa" [(ngModel)]="postulacionSeleccionada.Vacantes_Empresa_idEmpresa" name="idEmpresa" required>
+      </div>
+      <div class="form-group">
+          <label for="idCategoria">Vacantes_Categoria_idCategoria:</label>
+          <input type="text" class="form-control" id="idCategoria" [(ngModel)]="postulacionSeleccionada.Vacantes_Categoria_idCategoria" name="idCategoria" required>
+      </div>
+      <div class="form-group">
+          <label for="idVacantes">Vacantes_idVacantes:</label>
+          <input type="text" class="form-control" id="idVacantes" [(ngModel)]="postulacionSeleccionada.Vacantes_idVacantes" name="idVacantes" required>
+      </div>
+      <div class="form-group">
+          <label for="documento">Perfil_Registro_Documento:</label>
+          <input type="text" class="form-control" id="documento" [(ngModel)]="postulacionSeleccionada.Perfil_Registro_Documento" name="documento" required>
+      </div>
+      <div class="form-group">
+          <label for="idPerfil">Perfil_idPerfil:</label>
+          <input type="text" class="form-control" id="idPerfil" [(ngModel)]="postulacionSeleccionada.Perfil_idPerfil" name="idPerfil" required>
+      </div>
+      <div class="form-group">
+          <label for="fechaPostulados">Fecha_Postulados:</label>
+          <input type="text" class="form-control" id="fechaPostulados" [(ngModel)]="postulacionSeleccionada.Fecha_Postulados" name="fechaPostulados" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">{{ modoEdicion ? 'Actualizar' : 'Agregar' }} Postulación</button>
+      <button type="button" class="btn btn-secondary ml-2" (click)="agregarPostulacion()">Nueva Postulación</button>
+  </form>
+
+  <hr>
+
+  <h2 class="mb-4">Postulaciones</h2>
+  <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Vacantes_Empresa_idEmpresa</th>
+                  <th>Vacantes_Categoria_idCategoria</th>
+                  <th>Vacantes_idVacantes</th>
+                  <th>Perfil_Registro_Documento</th>
+                  <th>Perfil_idPerfil</th>
+                  <th>Fecha_Postulados</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let postulacion of postulaciones">
+                  <td>{{ postulacion.idPostulaciones }}</td>
+                  <td>{{ postulacion.Vacantes_Empresa_idEmpresa }}</td>
+                  <td>{{ postulacion.Vacantes_Categoria_idCategoria }}</td>
+                  <td>{{ postulacion.Vacantes_idVacantes }}</td>
+                  <td>{{ postulacion.Perfil_Registro_Documento }}</td>
+                  <td>{{ postulacion.Perfil_idPerfil }}</td>
+                  <td>{{ postulacion.Fecha_Postulados }}</td>
+                  <td>
+                      <button class="btn btn-primary btn-sm" (click)="seleccionarPostulacion(postulacion)">Editar</button>
+                      <button class="btn btn-danger btn-sm" (click)="eliminarPostulacion(postulacion.idPostulaciones)">Eliminar</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
