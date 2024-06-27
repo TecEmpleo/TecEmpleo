@@ -1,0 +1,105 @@
+*
+body{background-image: url(img/alkosto.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  }
+
+#titulo_tec_empleo{height: 150px;width: 100%;position: absolute;top:20px;left: 0px;background-color: #0026e3;text-align: CENTER;
+font-size: 100PX;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifs;color: white;
+}
+.a{left:210px;width: 900px;height: 400px;top:125px;background-image: url(../img/alkomprar.png);
+    background-repeat: no-repeat;background-size: 100% 100%;position:absolute;
+    border-radius: 25px;
+    margin-bottom: 25PX;}
+
+.b{left:200px;width: 1290px;height: 900px;top:200px;background-color: #acb2b9;
+background-repeat: no-repeat;background-size: 100% 100% ;position:absolute;
+border-radius: 0px;
+margin-bottom: 25PX;}
+#tabla6{height:900px ;width: 350px;position: absolute; left: 1510px;top:200px;
+    font-size: 110px;
+    align-items: right;
+    border-radius: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    opacity: .9;
+    color: rgb(5, 5, 5);
+    writing-mode:vertical-rl;
+    text-shadow:none;
+    background-color: rgba(255, 255, 255, 0.699);
+    text-decoration: none;
+    padding: 0px;
+    
+}
+#lineablanca{position: absolute;left: 200px;width: 1650px;height: 150px;right: 30px;
+    background-color: rgb(0, 0, 0);top:1150px;
+border-radius: 20px;}
+.d{left:50px;height: 300px;width: 1200px;top:600px;position: absolute;color: rgba(2, 2, 2, 0.925);font-family: Agency FB;
+font-size: 35px;}
+
+
+.e{left:950px;width: 550px;height: 450px;top:70px;background-image: url(../img/alkomprar.png);
+    background-repeat: no-repeat;background-size: 100% 100%;position:absolute;
+    border-radius: 25px;
+    margin-bottom: 25PX;}
+.f{left:200px;width: 1660px;height: 600px;top:1350px;background-color: #acb2b9;
+background-repeat: no-repeat;background-size: 100% 100%;position:absolute;
+border-radius: 0px;
+margin-bottom: 25PX;}
+
+
+.h{left:125px;height: 700px;width: 700px;top:160px;position: absolute;color: black;font-family: Agency FB;;
+font-size: 35px;
+text-align: center;}
+#lineablanca2{position: absolute;left: 200px;width: 1650px;height: 150px;right: 30px;
+    background-color: rgb(0, 0, 0);top:2000px;
+border-radius: 20px;}
+
+
+
+
+#tabla9{height:680px ;width: 100px;background: white ;position: absolute; left: 200px;top: 150px;
+    border-radius: 25px;
+    margin-bottom: 25PX; 
+color: black;
+font-size: 30px;
+font-family:Agency FB ;}
+#tabla13{height:680px ;width: 100px;background: white ;position: absolute; left: 400px;top:150px;
+    border-radius: 25px;
+    margin-bottom: 25PX;  
+    color: black;
+    font-size: 30px;
+    font-family:Agency FB ;}
+#tabla10{height:680px ;width:310px;background: white ;position: absolute; left: 650px  ;top:180px;
+    border-radius: 25px;
+    margin-bottom: 25PX;  
+    color: black;
+    font-size: 30px;
+    font-family:Agency FB ;}
+#tabla14{height:680px ;width: 150px;background: white ;position: absolute; left: 935px;top:150px;
+    border-radius: 25px;
+    margin-bottom: 25PX;
+    color: black;
+    font-size: 30px;
+font-family:Agency FB ;  
+text-shadow:none;
+}
+#tabla11{height:680px ;width: 300px;background:white;position: absolute; left: 1150px;top:150px;
+    border-radius: 25px;
+    margin-bottom: 25PX; 
+    color: black; 
+    font-size: 30px;
+    font-family:Agency FB ;}
+#tabla15{height:680px ;width: 450px;background:white;position: absolute; left: 1510px;top:150px;
+    border-radius: 25px;
+    margin-bottom: 25PX; 
+font-size: 30px;
+font-family:Agency FB ; }
+#piedepagina{height:950px ;width: 2100px;background:white;position: absolute; left:10px;top:2500px;
+    border-radius: 25px;
+    margin-bottom: 25PX; 
+    color: black; 
+    font-size: 30px;
+font-family:Agency FB ;
+text-shadow:none;
+opacity: .9;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../img/Logo.png">
+</head>
+<body>
+<nav>
+    <h1>Crea Tu HDV</h1>
+</nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Insertar Datos HDV</h2>
+            <form method="post" action="backend.php">
+                <div class="form-group">
+                    <div class="form-group-row">
+                        <label for="nombre_completo">Nombre Completo:</label>
+                        <input type="text" id="nombre_completo" name="nombre_completo" required>
+                    </div>
+                    <div class="form-group-row">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" name="cargo" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-group-row">
+                        <label for="nombre_cargo">Nombre del Cargo:</label>
+                        <input type="text" id="nombre_cargo" name="nombre_cargo" required>
+                    </div>
+                    <div class="form-group-row">
+                        <label for="funciones">Funciones:</label>
+                        <textarea id="funciones" name="funciones" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-group-row">
+                        <label for="trabajando">Trabajando:</label>
+                        <select id="trabajando" name="trabajando" required>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group-row">
+                        <label for="desde">Desde:</label>
+                        <input type="date" id="desde" name="desde" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-group-row">
+                        <label for="hasta">Hasta:</label>
+                        <input type="date" id="hasta" name="hasta" required>
+                    </div>
+                    <div class="form-group-row">
+                        <label for="nivel_educativo">Nivel Educativo:</label>
+                        <input type="text" id="nivel_educativo" name="nivel_educativo" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-group-row">
+                        <label for="centro_educativo">Centro Educativo:</label>
+                        <input type="text" id="centro_educativo" name="centro_educativo" required>
+                    </div>
+                    <div class="form-group-row">
+                        <label for="cursando_actualmente">¿Está cursando actualmente?</label>
+                        <select id="cursando_actualmente" name="cursando_actualmente" required>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Limpia los campos del formulario después de enviarlo
+        document.getElementById("hdvForm").addEventListener("submit", function() {
+            var form = this;
+            setTimeout(function() {
+                form.reset();
+            }, 1000); // Limpia los campos después de 1 segundo
+                    // Función para agregar una clase de animación al enviar el formulario
+        function onSubmit() {
+            // Obtener el formulario
+            var form = document.getElementById("myForm");
+            // Agregar una clase de animación al formulario
+            form.classList.add("submit-animation");
+            // Esperar un corto período de tiempo antes de enviar el formulario
+            setTimeout(function() {
+                form.submit();
+            }, 1000); // 1000 milisegundos = 1 segundo
+        }
+        });
+    </script>
+</body>
+</html>
