@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.open-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #1533ce;
+    color: #fff;
+    padding: 15px 50px; 
+    border: 2px solid #fff; 
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 80vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    overflow: hidden;
+}
+
+.navbarchat {
+    background-color: #1533ce;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #fff; 
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-name {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.user-icons {
+    margin-left: auto;
+}
+
+.user-icons a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.user-icons a:hover {
+    color: #ccc;
+}
+
+.chat-body {
+    overflow-y: auto;
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    background-color: #e0dede; 
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 8px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #6b0207;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #B5B2B2;
+}
+
+.question {
+    margin-bottom: 25px;
+    padding: 10px; 
+    color: #1533ce;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+}
+.chat-en-linea {
+    background-color: #6b0207; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    float: right; 
+}
+
+.chat-en-linea:hover {
+    background-color: #B5B2B2;
+}
+
+.chat-en-linea:active {
+    background-color: #B5B2B2;
+}
+
+.chat-form input[type="text"],
+.chat-form input[type="email"],
+.chat-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.chat-form textarea {
+    height: 100px;
+}

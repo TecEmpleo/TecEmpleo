@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #0026e3;
+    overflow-x: hidden;
+    transition: width 0.5s; /* Cambiado el atributo de transición */
+    padding-top: 60px;
+}
+
+.menu a {
+    text-align: left;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.menu a:hover {
+    color: #f1f1f1;
+}
+
+.menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #5c5c5c;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.menu li {
+    margin-top: auto;
+    list-style: none;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #f1f1f1;
+}
+
+#searchContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+#searchButton {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #0026e3;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+
+.container {
+    margin: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+.container h1{ 
+    text-align: 20px;
+    color: #0026e3;
+    
+}
+
+.list-group-item {
+    background-color: #fffbfb;
+    border: 1px solid #7a7a7a;
+    margin-bottom: 10px;
+}
+
+.list-group-item h1,
+.list-group-item h2 {
+    color: #7a7a7a;
+    font-size: 15px;
+}
+
+.list-group-item {
+    color: #0026e3;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.iconos-derecha i {
+    color: #0026e3;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 24px;
+}
+
+.list-group-item .no-usuarios {
+    color: #dc3545;
+    font-weight: bold;
+}
+.container button {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+.container button:hover {
+    background-color: #0056b3; 
+}
+
+.container button i {
+    margin-right: 5px; 
+    font-size: 20px; 
+}

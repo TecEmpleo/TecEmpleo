@@ -1,0 +1,443 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background-color: #1533ce;
+    padding: 10px 20px; /* Ajustamos el padding para espaciar el contenido */
+    color: white;
+    text-align: center; /* Centramos el contenido del nav */
+  }
+  nav img {
+    max-width: 10%; /* Hacemos que la imagen sea responsiva y se ajuste al ancho del nav */
+    height: auto;
+    display: block; /* Quitamos cualquier margen o padding de la imagen */
+    margin: 0;
+    padding: 0;
+  }
+
+  .cont  {
+    border: 2px solid #efeeee; 
+    padding: 10px; /* Espacio alrededor del contenedor */
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+  .contenedor {
+    border: 2px solid #fdfdfd; 
+    padding: 10px; /* Espacio alrededor del contenedor */
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+
+
+  .contenedor-circular {
+    width: 200px; /* ajusta el tamaño del círculo según tus necesidades */
+    height: 200px;
+    display: inline-block;
+    border-radius: 50%; /* convierte el contenedor en un círculo */
+    overflow: hidden; /* asegura que la imagen se ajuste al círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* color de fondo opcional */
+}
+
+.contenedor-circular img {
+    width: 100%; /* asegura que la imagen cubra todo el contenedor */
+    height: 100%; /* asegura que la imagen cubra todo el contenedor */
+    object-fit: cover; /* asegura que la imagen se ajuste al contenedor sin deformarse */
+}
+
+.container_name {
+    border: 2px solid #f3f3f4; 
+    padding: 10px; /* Espacio alrededor del contenedor */
+    border-radius: 10px;
+    width: fit-content; /* ajusta el tamaño del contenedor según el contenido */
+    height: 200px;
+    margin-left: 50px; 
+    display: flex; /* Usa flexbox para alinear verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.container_name h1 {
+    font-size: 150px; /* Tamaño de fuente más grande */
+}
+
+.container_config{
+    border: 2px solid #fafafc; 
+    padding: 10px; /* Espacio alrededor del contenedor */
+    border-radius: 10px;
+    width: fit-content;
+    height: 200px;
+    margin-left: 50px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+
+.container_config {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+.container_config button {
+    margin-bottom: 10px; /* Espacio hacia abajo entre botones */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 2px solid #ffffff; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #1533ce; /* Color de fondo */
+    color: #fafafa; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.container_config button:hover {
+    background-color: #ffffff; /* Color de fondo al pasar el ratón */
+    color: #050404; /* Color del texto al pasar el ratón */
+}
+
+input[type="file"] {
+    padding: 5px; /* Espaciado interno */
+    border: 1px solid #0626f5; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: transparent; /* Fondo transparente */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el botón "Seleccionar archivo" */
+input[type="file"] + br + br + input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: #0626f5; /* Color del texto */
+    border: 1px solid #0626f5; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+input[type="file"] + br + br + input[type="submit"]:hover {
+    background-color: #f2f2f2; /* Color de fondo al pasar el ratón */
+}
+
+
+
+input[type="submit"] {
+    padding: 10px 20px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #0626f5; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+/* Estilo para la etiqueta del campo */
+label {
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  /* Estilo para el campo de entrada */
+  input[type="url"] {
+    width: 100%; /* Ancho completo del campo */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* El ancho incluye el borde y el relleno */
+  }
+  
+  /* Estilo para el mensaje de ayuda */
+  input[type="url"]::placeholder {
+    color: #999; /* Color del texto de la ayuda */
+  }
+  
+  /* Estilo para el mensaje de error */
+  input[type="url"]:invalid {
+    border-color: #ff0000; /* Borde rojo para indicar error de validación */
+  }
+  
+  /* Estilo para el texto de ayuda */
+  .help-text {
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    color: #666; /* Color de texto más claro */
+  }
+
+/* Cambiar el color de fondo del botón cuando se pasa el ratón */
+input[type="submit"]:hover {
+    background-color: #000000;
+}
+
+
+.cerrar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+
+
+.cerrar button {
+    background-color: #0026e3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Elimina la subrayado del texto */
+}
+
+.cerrar button:hover {
+    background-color: #0056b3;
+}
+
+
+.config {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.config form {
+    background-color: #f9f9f9;
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Ancho máximo del formulario */
+    width: 100%; /* Para que se ajuste al contenedor */
+}
+
+.config label {
+    font-weight: bold;
+}
+
+.config input[type="text"],
+.config input[type="email"],
+.config input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.config input[type="submit"] {
+    background-color: #0026e3; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.config input[type="submit"]:hover {
+    background-color: #04c5cb;
+}
+
+.config input[type="submit"]:focus {
+    outline: none;
+}
+
+/* Estilos adicionales según sea necesario */
+.config label,
+.config input[type="text"],
+.config input[type="email"],
+.config input[type="tel"],
+.config input[type="submit"] {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-row:last-child {
+    justify-content: flex-end;
+}
+
+
+#imagenContainer {
+    display: none;
+    background-color: #f3f3f3; /* Color gris */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center; /* Para centrar el contenido */
+}
+
+/* Estilos para el contenedor del formulario */
+#CrearVacantes {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para los elementos del formulario */
+.input-file-container {
+    margin-bottom: 15px;
+}
+
+.input-file-container label {
+    font-weight: bold;
+}
+
+.input-file-container textarea,
+.input-file-container input[type="date"],
+.input-file-container select,
+.input-file-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-file-container select {
+    appearance: none; /* Eliminar el estilo nativo del sistema operativo */
+    -webkit-appearance: none; /* Para navegadores basados en WebKit como Chrome y Safari */
+    -moz-appearance: none; /* Para navegadores basados en Gecko como Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="%23828282"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Agregar una flecha desplegable personalizada */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px;
+}
+
+.input-file-container input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-file-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para la etiqueta de error */
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor principal */
+
+
+/* Estilo para los contenedores de las vacantes */
+#VerVacantes div {
+    border: 1px solid #054068;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    padding: 100px;
+    margin-bottom: 100px;
+}
+
+/* Estilo para los títulos de las vacantes */
+#VerVacantes h3 {
+    margin-top: 0;
+}
+
+/* Estilo para los botones */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para los botones al pasar el ratón por encima */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los mensajes de éxito */
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+/* Estilo para los mensajes de error */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+
+#postulados {
+    display: none; /* Inicialmente oculto */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+    margin-top: 20px; /* Espacio superior */
+    max-width: 600px; /* Ancho máximo del div */
+    margin-left: auto; /* Alinear a la izquierda */
+    margin-right: auto; /* Alinear a la derecha */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+#postulados p {
+    margin-bottom: 10px; /* Espacio entre párrafos */
+    padding: 5px; /* Espaciado interno */
+    border-bottom: 1px solid #ddd; /* Borde inferior gris */
+}
+
+#postulados p:last-child {
+    border-bottom: none; /* No aplicar borde inferior al último párrafo */
+}

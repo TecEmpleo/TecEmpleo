@@ -1,0 +1,481 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #0026e3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu a {
+    text-align: left;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.menu a:hover {
+    color: #f1f1f1;
+}
+
+.menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #5c5c5c;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.menu li {
+    margin-top: auto;
+    list-style: none;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #f1f1f1;
+}
+
+#searchContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+#searchButton {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #0026e3;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+
+#resultContainer {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(168, 168, 168, 0.1);
+    max-width: 400px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #searchContainer {
+        margin-bottom: 10px;
+    }
+
+    #searchInput {
+        width: 100%; 
+        margin-right: 0;
+    }
+
+    #searchButton {
+        width: 100%; 
+        margin-top: 10px;
+    }
+
+    #resultContainer {
+        max-width: 100%; 
+    }
+}
+
+h1 {
+    color: #0026e3;
+}
+
+.container-xxl {
+    margin: 20px; 
+    overflow-y: auto;
+    max-height: 400px; 
+}
+
+.list-group-item {
+    background-color: #fffbfb; 
+    border: 1px solid #7a7a7a; 
+    margin-bottom: 10px; 
+}
+
+.list-group-item h1,
+.list-group-item h2 {
+    color: #7a7a7a;
+    font-size: 15px; 
+}
+
+.list-group-item {
+    color: #0026e3; 
+    cursor: pointer; 
+    margin: 0 5px; 
+}
+
+.iconos-derecha i {
+    color: #0026e3; 
+    cursor: pointer; 
+    margin: 0 5px;
+    font-size: 24px; 
+}
+
+.list-group-item .no-usuarios {
+    color: #dc3545; 
+    font-weight: bold; 
+}
+
+.vacancy-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px; 
+    border-radius: 8px;
+    border: 1px solid #0026e3;
+    transition: border-color 0.3s ease; 
+    background-color: #fffbfb;
+}
+
+.vacancy-container:hover {
+    border-color: rgba(0, 38, 227, 0.5); 
+}
+
+.vacancy-container h1,
+.vacancy-container p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.imagen-estilizada {
+    max-width: 50%; 
+    height: auto; 
+}
+
+.button-vacancy {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #0026e3;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    float: center;
+    transition: background-color 0.3s ease; 
+}
+
+.button-vacancy:hover {
+    background-color: #5a6268; 
+}
+
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #0026e3;
+    color: #fff;
+    border-bottom: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.modal-body textarea,
+.modal-body input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    background-color: #0413dd;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #001fa3;
+}
+
+.container {
+    text-align: center;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+h2 {
+    color: #0026e3;
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box div {
+    flex: 0 0 calc(20% - 20px);
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #0026e3;
+    border-radius: 8px;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.text {
+    margin: 5px 0;
+}
+
+.box img {
+    width: 80px;
+    height: 80px;
+}
+
+.contenedor-izquierda {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #dbd9d9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.contenedor-izquierda h1 {
+    border-bottom: 2px solid #dbd9d9;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+}
+
+.contenedor-izquierda h2 {
+    font-size: 20px;
+    color: #000;
+}
+
+.contenedor-izquierda span {
+    font-weight: bold;
+    color: blue;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#iniciar-tiempo,
+#detener-tiempo,
+#reanudar-tiempo {
+    background-color: #ffffff;
+    color: #666;
+    border: 2px solid #999;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+#iniciar-tiempo:disabled,
+#detener-tiempo:disabled,
+#reanudar-tiempo:disabled {
+    background-color: #f2f2f2;
+    color: #858484;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.contenedor-izquierda i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.calendario-container {
+    width: 100%;
+    max-width: 400px; 
+    margin: 20px auto 0; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.mes,
+.año {
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 40px); 
+    gap: 5px;
+}
+.dia {
+    position: relative;
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1%;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1; 
+}
+
+
+.dia-actual {
+    background-color: #0026e3;
+    color: #fff;
+}
+
+.dia:hover {
+    background-color: #4e5aff;
+}
+
+select.mes,
+select.año {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #007bff;
+    border-radius: 1px;
+    background-color: #f8f9fa;
+    color: #131111;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+select.mes:hover,
+select.año:hover {
+    background-color: #43a0fd;
+    color: white;
+}
+
+select.mes:focus,
+select.año:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+select.mes::after,
+select.año::after {
+    content: '\25BC';
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+button.flecha-izquierda,
+button.flecha-derecha {
+    background-color: #0026e3;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button.flecha-izquierda:hover,
+button.flecha-derecha:hover {
+    background-color: #0056b3;
+}
+
+button.flecha-izquierda i,
+button.flecha-derecha i {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .dias {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
